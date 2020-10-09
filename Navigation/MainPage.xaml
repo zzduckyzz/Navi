@@ -1,0 +1,135 @@
+﻿<Page
+    x:Class="Navigation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            
+            
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="Checkbox" VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Column="1"
+                    Margin="20,10,0,10"
+                    Orientation="Horizontal">
+            <CheckBox Name="MyCheckBox"
+                      Content="Agree"
+                      Tapped="MyCheckBox_Tapped"></CheckBox>
+            <TextBlock Name="CheckBoxResultTextBlock"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="2"
+                   Text="RadioButton"
+                   VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,10,0,10" RenderTransformOrigin="0.417,0.938">
+            <RadioButton Name="YesRadioButton"
+                         Content="Yes"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton Name="NoRadioButton"
+                         Content="No"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"></RadioButton>
+            <TextBlock Name="RadioButtonTextBlock"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="3"
+                   Text="ComboBox"
+                   Name="MyComboBox"
+                   VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="20,10,0,10">
+            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="Forth"/>
+                <ComboBoxItem Content="Fifth"/>
+                <ComboBoxItem Content="Sixth" IsSelected="True"/>
+            </ComboBox>
+            <TextBlock Name="ComboBoxResultTextBlock"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="4"
+                   Text="ListBox"
+                   VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="20,10,0,10">
+            <ListBox Name="MyListBox"
+                     SelectionMode="Multiple"
+                     SelectionChanged="MyListBox_SelectionChanged">
+                <ListBoxItem Content="First"></ListBoxItem>
+                <ListBoxItem Content="Second"></ListBoxItem>
+                <ListBoxItem Content="Third"></ListBoxItem>
+            </ListBox>
+            <TextBlock Name="ListBoxResultTextBock"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="5"
+                   Text="Image"
+                   VerticalAlignment="Center"></TextBlock>
+        <Image Source="assets/StoreLogo.png"
+               HorizontalAlignment="Left"
+               Width="250"
+               Height="50"
+               Grid.Row="5"
+               Grid.Column="1"
+               Stretch="Uniform"
+               Margin="20,10,0,10"></Image>
+        <TextBlock Grid.Row="7"
+                   Text="ToggleButton"
+                   VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="7"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,10,0,10">
+            <ToggleButton Name="MyToggleButton"
+                          Content="Premimum Option"
+                          IsThreeState="True"
+                          Click="MyToggleButton_Click"></ToggleButton>
+            
+                <TextBlock Name="ToggleButtonResultTextBlock"></TextBlock>
+            
+        </StackPanel>
+        <TextBlock Grid.Row="8"
+                   Text="ToggleSwitch"
+                   VerticalAlignment="Center"></TextBlock>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Margin="20,10,0,10">
+            <ToggleSwitch>
+                <ToggleSwitch.OffContent>
+                    <TextBlock Text="shut down"></TextBlock>
+                </ToggleSwitch.OffContent>
+                <ToggleSwitch.OnContent>
+                    <TextBlock Text="on"></TextBlock>
+                </ToggleSwitch.OnContent>
+            </ToggleSwitch>
+            <TextBlock Name="ToggleSwitchResultText"></TextBlock>
+        </StackPanel>
+        
+
+
+
+
+    </Grid>
+</Page>
